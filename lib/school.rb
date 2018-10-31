@@ -7,19 +7,17 @@ class School
   end
 
   def add_student(name, grade)
-    if !@roster[grade]
-      @roster[grade] = []
-    end
+    @roster[grade] ||= []
     @roster[grade] << name
   end
-  
+
   def grade(grade)
     @roster[grade]
   end
 
   def sort
-    @roster.each do |key, value|
-      value.sort!
+    @roster.each do |grade, name|
+      name.sort!
     end
   end
 end
