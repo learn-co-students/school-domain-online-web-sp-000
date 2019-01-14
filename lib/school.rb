@@ -17,15 +17,17 @@ class School
 
   def grade(grade)
     if @roster[grade]
-    @roster[grade]
+      @roster[grade]
     end
   end
 
   def sort
     sorted_students = []
+    result = {}
     @roster.each do | grade, students|
       sorted_students = students.sort
+      result[grade] = sorted_students
     end
-    @roster
+    result
   end
 end
