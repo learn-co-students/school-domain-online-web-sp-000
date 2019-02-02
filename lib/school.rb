@@ -13,10 +13,9 @@ attr_accessor :school_name
     @school_roster
   end
   
-  
   def add_student(student_name, grade)
     
-    if @school_roster[grade] != nil
+    if @school_roster.keys.include?(grade)
       @school_roster[grade] << student_name
     else
       @school_roster[grade] = [student_name]
