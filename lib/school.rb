@@ -23,7 +23,8 @@ class School
   end 
   
   def sort
-    @roster.sort {|a, b| b <=> a}
-    @roster.invert
+    @roster.each do |grade, name|
+      @roster[grade] = name.sort  
+    end 
   end 
 end 
