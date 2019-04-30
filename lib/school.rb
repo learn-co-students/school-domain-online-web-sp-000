@@ -10,6 +10,6 @@ def initialize(roster)
  end
 end
 
-def add_student(student, grade)
-  ROSTER << student
+def add_student(student)
+  ROSTER << 
  end
