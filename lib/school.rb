@@ -9,14 +9,12 @@ class School
     @roster={}
   end
 
-  def add_student(name, grade) # adds name VALUE to hash roster    
+  def add_student(student, level)
+    # this sort of means #=> a || a = b ... or #=> x || x = y
 
-    if @roster[grade] != nil
-      @roster[grade] << name
-    else
-      @roster[grade] = [name]
-    end
-  end
+    roster[level] ||= []
+    roster[level] << student
+  end 
   
   
   def grade(grade)    # iterates through roster hash, compares KEY and                       grade, and if its equal RETURNS associated                          VALUE
