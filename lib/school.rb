@@ -25,14 +25,13 @@ class School
   end
   end
   
-  def sort       # iterates through roster hash and .sorts values and                   assigns to a new hash
-   nu_hash = {}
-   roster.each do |x, y| 
-     nu_hash[x] = y.sort 
-   end 
-   nu_hash
-  end 
-  
+  def sort
+    sorted = {}
+    roster.each do |grade, students|
+      sorted[grade] = students.sort
+    end
+    sorted
+  end
 end
 
 
