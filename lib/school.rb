@@ -19,7 +19,7 @@ class School
   end
   
   
-  def grade(grade)    # iterates through roster hash, compares KEY and                       grade, and if its the same RETURNS associated                       VALUE
+  def grade(grade)    # iterates through roster hash, compares KEY and                       grade, and if its equal RETURNS associated                          VALUE
     roster.collect do |x,y|
     if x == grade
       return y
