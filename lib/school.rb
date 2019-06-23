@@ -1,14 +1,27 @@
 # code here!
 class School
-  
-  ROSTER = [ ]
-  
-  attr_reader :roster, :add_student
-  
-  def initialize(roster)
-    @roster = ROSTER
+  attr_accessor :name, :roster
+
+  def initialize(name)
+    @name = name
+    @roster = {}
   end
-  
-  def add_student(name,grade)
-    @add_student = add_student
+
+  def add_student(student_name, grade)
+    roster[grade] ||= []
+    roster[grade] << student_name
   end
+
+  def grade(student_grade)
+    roster[student_grade]
+  end
+
+ 
+  def sort
+    sorted = {}
+    roster.each do |grade, students|
+      sorted[grade] = students.sort
+    end
+    sorted
+  end
+end
