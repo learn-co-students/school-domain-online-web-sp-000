@@ -22,7 +22,7 @@ end
      sorted[grade] = students.sort          #condition which sorts our students alphabetically by the #sort method
    end
    return sorted
- end
+ 
 end
 
 school = School.new("Bayside High School")
