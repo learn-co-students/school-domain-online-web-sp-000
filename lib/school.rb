@@ -3,15 +3,15 @@ class School                            #School class refers to a "model" in the
 
   def initialize(name)
     @name = name
-    @roster = {}
+    @roster = {}                      #initialized empty hash
   end
 
   def add_student(student_name, grade)
     roster[grade] ||= []               #Conditional assignment operator: is equivalent to a||a=b
-    roster[grade] << student_name       
+    roster[grade] << student_name      #Keys of grade levels, then value of each key will be an array of student names.
   end
 
-  def grade(student_grade)
+  def grade(student_grade)                #retreives students from grade
     roster[student_grade]
   end
 
