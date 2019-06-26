@@ -26,8 +26,9 @@ class School
   def sort
     @roster.each do |student_grade, name|
       @roster[student_grade] = name.sort
+      # alternative solution
+      #name.sort!
     end
-    @roster
   end
 
 end
