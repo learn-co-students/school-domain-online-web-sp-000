@@ -8,10 +8,11 @@ def initialize(school)
 end
 
 def add_student(student, grade)
-  @roster[grade] = []
+  if @roster.has_key?(grade)
   @roster[grade] << student
-  # # @roster[grade] = student
-  # end
+else
+  @roster[grade] = [student]
+  end
 end
 
 
