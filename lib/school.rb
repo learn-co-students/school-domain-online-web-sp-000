@@ -19,9 +19,11 @@ class School
       @roster[grade] << students_name
     end
   end
+
   def grade(num)
     @roster[num]
   end
+
   def sort
     @roster.each {|k, v| v.sort!}
   end
