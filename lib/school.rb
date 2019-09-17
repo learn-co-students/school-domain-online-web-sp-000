@@ -13,12 +13,13 @@ class School
   end
 
   def grade(grade)
+    # takes in a grade parameter and return all the students in that grade.
     @roster[grade]
   end
 
   def sort
-    @roster.each do |grade, name|
-      @roster[grade] = name.sort
+    @roster.each do |grade, name| # iterates through the roster.
+      @roster[grade] = name.sort # sorts the students names in alphabetical order.
     end
   end
 
