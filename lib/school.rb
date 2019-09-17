@@ -13,8 +13,7 @@ class School
   end
 
   def grade(grade)
-    # takes in a grade parameter and return all the students in that grade.
-    @roster[grade]
+    @roster[grade] # takes in a grade parameter and returns all the students in that grade.
   end
 
   def sort
