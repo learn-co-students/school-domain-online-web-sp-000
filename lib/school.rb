@@ -1,4 +1,3 @@
-require "pry"
 # code here!
 class School
 
@@ -31,4 +30,3 @@ class School
   end
 
 end
-binding.pry
