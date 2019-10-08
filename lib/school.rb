@@ -3,15 +3,15 @@ class School
   attr_accessor :name, :roster
   def initialize(name)
     @name = name
-    @roster = Hash.new { |name,year| name[year] = []}
+    @roster = Hash.new { |name, grade| name[grade] = []}
   end
 
-  def add_student(name, year)
-    @roster[year] << name
+  def add_student(name, grade)
+    @roster[grade] << name
   end
 
-  def grade(year)
-    @roster[year]
+  def grade(grade)
+    @roster[grade]
   end
 
   def sort
