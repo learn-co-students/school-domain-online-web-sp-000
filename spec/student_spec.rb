@@ -59,3 +59,10 @@ describe 'School' do
     end
   end
 end
+
+roster={
+  7 => ["Blake Johnson", "Jack Bauer"],
+  9 => ["Bart Simpson", "Homer Simpson"],
+  10 => ["Avi Flombaum", "Jeff Baird"]
+}
+  roster.sort
