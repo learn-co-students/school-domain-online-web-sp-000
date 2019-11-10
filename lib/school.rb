@@ -7,8 +7,6 @@ class School
     @roster = {}
   end
 
-  # it 'is able to add students to different grades' do
-  # expect(@school.roster).to eq({9 => ["Homer Simpson"], 10 => ["Jeff Baird", "Avi Flombaum"], 7 => ["Blake Johnson"]})
   def add_student(name, grade)
     hash = self.roster
     if hash.has_key?(grade)
@@ -20,14 +18,10 @@ class School
     self.roster = hash
   end
 
-  # it 'is able to retreive students from a grade' do
-  # expect(@school.grade(10)).to eq(["Avi Flombaum", "Jeff Baird"])
   def grade(n)
     roster[n]
   end
 
-  # it 'is able to sort the students' do
-  # expect(@school.sort).to eq({7 => ["Blake Johnson", "Jack Bauer"], 9 => ["Bart Simpson", "Homer Simpson"], 10 => ["Avi Flombaum", "Jeff Baird"]})
   def sort
     roster.sort_by { |k, v| v.sort! }.reverse!.to_h
   end
