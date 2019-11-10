@@ -29,8 +29,7 @@ class School
   # it 'is able to sort the students' do
   # expect(@school.sort).to eq({7 => ["Blake Johnson", "Jack Bauer"], 9 => ["Bart Simpson", "Homer Simpson"], 10 => ["Avi Flombaum", "Jeff Baird"]})
   def sort
-    roster.sort_by { |k, v| v.sort! }.reverse!
-    roster.sort.to_h
+    roster.sort_by { |k, v| v.sort! }.reverse!.to_h
   end
 end
 
