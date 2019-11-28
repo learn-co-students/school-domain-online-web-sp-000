@@ -25,5 +25,3 @@ class School
     @roster.each {|grade, students| students.sort!}
   end
 end
-
-binding.pry
