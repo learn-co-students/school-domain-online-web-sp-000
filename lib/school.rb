@@ -16,11 +16,11 @@ class School
 
   def add_student(student_name, grade)
 
-    if roster[grade]
-      return student_name
-    else
-      roster[grade] << student_name
-    end
+      if roster[grade] = []
+        return student_name
+      else
+        roster[grade] << student_name
+      end
 
 
   end
@@ -32,6 +32,4 @@ class School
   #def grade(student_grade)
   #  roster[student_grade]
 #  end
-
-
 end
