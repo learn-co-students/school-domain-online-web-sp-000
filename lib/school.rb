@@ -1,4 +1,3 @@
-# code here!
 class School
 
   def initialize(name)
@@ -16,20 +15,29 @@ class School
 
   def add_student(student_name, grade)
 
-      if roster[grade]
-                return student_name
-      else
-        roster[grade] << student_name
+    if roster[grade]
+         roster[grade] << student_name
+        else
+    		roster[grade] = []  #set roster[grade] equal to an empty array if it doesnt already exist
+          roster[grade] << student_name
       end
+    end
 
-
-  end
-  #def add_student(student_name, grade)
-    #roster[grade] ||= []
-    #roster[grade] << student_name
-#  end
-
-  #def grade(student_grade)
-  #  roster[student_grade]
-#  end
 end
+  #def add_student(student_name, grade)
+      #roster[grade] ||= []
+      #roster[grade] << student_name
+    #end
+
+  #  def grade(student_grade)
+    #  roster[student_grade]
+  #  end
+
+    #def sort
+    #  sorted = {}
+    #  roster.each do |grade, students|
+    #    sorted[grade] = students.sort
+    #  end
+  #    sorted
+  #  end
+#  end
