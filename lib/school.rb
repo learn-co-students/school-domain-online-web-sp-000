@@ -24,6 +24,10 @@ class School
   end
   
   def sort 
-    @roster.each {|k, v| v.sort!}
+    sorted_hash = {}
+    @roster.each do |k, v|
+      sorted_hash[k] = v.sort
+    end 
+    sorted_hash
   end 
 end 
