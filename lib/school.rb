@@ -24,6 +24,6 @@ class School
   end
   
   def sort 
-    
+    value.sort
   end 
 end 
