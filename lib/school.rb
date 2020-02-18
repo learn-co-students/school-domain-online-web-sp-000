@@ -1,4 +1,6 @@
-require 'pry'
+
+# code here!
+
 class School
   def initialize (name)
     @name = name
@@ -9,6 +11,7 @@ class School
     if @roster.include?(grade)
       @roster[grade] << name
     else
+
       @roster[grade] = []
       @roster[grade] <<  name
     end
