@@ -1,25 +1,25 @@
 class School
-  attr_reader :roster
+  attr_reader :name, :roster
 
-  def initialize(school)
-    @school = school
+  def initialize(name)
+    @name = name
     @roster = {}
   end
 
   def add_student(student_name, grade)
-    if @roster[grade] == nil
-      @roster[grade] = [student_name]
-    else
-      @roster[grade] << student_name
-    end
+    roster[grade] ||= []
+    roster[grade] << student_name
   end
 
-  def grade(grade_number)
-    @roster[grade_number]
+  def grade(student_grade)
+    @roster[student_grade]
   end
 
   def sort
-    @roster.collect {|grade, student| student.sort!}
-    @roster
-  end
+   sorted = {}
+   roster.each do |grade, students|
+     sorted[grade] = students.sort
+   end
+   sorted
+ end
 end
