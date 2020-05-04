@@ -1,14 +1,28 @@
+require 'pry'
 class School
 
-  roster = {GRADES[0..12]}
+  def initialize(school)
+    @school = school
+    @roster = {}
+  end
+
+  def school
+    @school
+    @roster
+  end
 
   def add_student=(name, grade)
     @name = name
     @grade = grade
-    roster[:grades].collect do |grades|
-      if grades == @grade
-        GRADES << @name
-      end
-    end
+    @roster[:"#{grade}"] = []
+    @roster[:"#{grade}"] << name
   end
+
+  def add_student
+    @roster
+  end
+
+  def grade
+  end
+
 end
