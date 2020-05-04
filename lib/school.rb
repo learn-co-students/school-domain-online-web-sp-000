@@ -6,23 +6,37 @@ class School
     @roster = {}
   end
 
+  def roster
+    @roster
+  end
+
+
+
   def school
     @school
-    @roster
   end
 
-  def add_student=(name, grade)
-    @name = name
-    @grade = grade
-    @roster[:"#{grade}"] = []
-    @roster[:"#{grade}"] << name
+  def add_student (name, grade)
+    if @roster.include?(grade)
+          @roster[grade] << "#{name}"
+    else
+      @roster[grade] = []
+      @roster[grade] << "#{name}"
+    end
   end
 
-  def add_student
-    @roster
+  def grade(grade)
+    @roster[grade]
   end
 
-  def grade
-  end
+def sort
+  hash = {}
+  @roster.each do |grade, name|
+      hash[grade] = []
+      hash[grade] = name
+    name.sort! { |alpha, beta| alpha <=> beta }
 
+  end
+    # @roster = hash.sort
+    end
 end
