@@ -10,7 +10,7 @@ class School
   end
 
   def add_student(student, grade)
-    @roster[grade] ||= [] # create grade if not in roster
+    @roster[grade] ||= [] # create grade if not in roster; ||= assigns if evaluates to nil or false; if grade not in roster, roster[grade] = nil
     @roster[grade] << student
   end
 
