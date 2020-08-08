@@ -1,5 +1,5 @@
 class School
-  attr_reader :roster
+  attr_reader :name, :roster
 
   def initialize(name)
     @name = name
@@ -20,8 +20,10 @@ class School
   end
 
   def sort
-    @roster.each do |grade, name|
-      @roster[grade] = name.sort
+    sorted = {}
+    @roster.each do |grade, names|
+      sorted[grade] = names.sort
     end
+    sorted
   end
 end
