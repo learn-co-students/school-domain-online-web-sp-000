@@ -21,7 +21,6 @@ class School
   end 
   
 
-# Here's learn.co's solution:
 def sort 
   nu_hash = {}
   roster.each do |x, y| 
