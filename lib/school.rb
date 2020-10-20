@@ -1,7 +1,7 @@
 class School
 
 attr_accessor
-attr_reader :name, :roster, :grade
+attr_reader :name, :roster
 attr_writer
 
 def initialize(name)
@@ -18,8 +18,16 @@ def add_student(name, grade)
   end
 end
 
-# def grade
-#
-# end
+def grade(num)
+  return @roster[num]
+end
+
+def sort
+  sorted_roster = {}
+  @roster.each do |grade, names|
+    sorted_roster[grade] = @roster[grade].sort
+  end
+  return sorted_roster
+end
 
 end
