@@ -25,7 +25,7 @@ end
 def sort
   sorted_roster = {}
   @roster.each do |grade, names|
-    sorted_roster[grade] = @roster[grade].sort
+    sorted_roster[grade] = names.sort
   end
   return sorted_roster
 end
