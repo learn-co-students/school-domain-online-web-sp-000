@@ -27,18 +27,3 @@ class School
   end
 
 end
-
-
-=begin
-def sort
-        @roster.map do |key, value|
-        value.sort
-        end
-    end
-def sort
-   @roster.map do |key,value|
-     @roster[key] = value.sort
-   end
-   @roster
-end
-=end
