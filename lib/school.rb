@@ -17,13 +17,14 @@ class School
     @roster
   end
   
-  def add_student(grade, student_name)
-    @roster[10] = ["AC Slater"]
-    @roster[9] = ["Homer Simpson"]
-    @roster[10] << ["Jeff Biard", "Avi Flombaum"]
-    @roster[7] = ["Blake Johnson"]
-  end 
-  
+  def add_student(student_name, grade)
+    if roster[grade]
+      @roster[grade] << student_name
+    else 
+      @roster[grade] = [student_name]
+   end
+ end 
+
   def grade 
     
   end 
