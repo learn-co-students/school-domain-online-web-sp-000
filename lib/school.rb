@@ -1,21 +1,11 @@
+require 'pry'
 class School 
+  attr_reader :name, :roster 
   
   def initialize(name)
     @name= name
     @roster= {}
   end 
-  
-  def name 
-    @name= name 
-  end 
-  
-  def name 
-    @name
-  end 
-  
-   def roster 
-    @roster
-  end
   
   def add_student(student_name, grade)
     if roster[grade]
@@ -23,16 +13,17 @@ class School
     else 
       @roster[grade] = [student_name]
    end
- end 
+ end  
 
-  def grade 
-    
+  def grade(grade)
+    roster.fetch(grade)
   end 
   
-  def sort 
-    
+  def sort
+    roster.each do |grade, student_array| 
+      student_array.sort!
+    end 
   end 
-  
 end 
   
     
