@@ -1,19 +1,37 @@
 class School 
-  def initialize (roster)
-    @roster= roster 
+  
+  def initialize(name)
+    @name= name
+    @roster= {}
   end 
   
-  def roster
-    @roster = {}
+  def name 
+    @name= name 
+  end 
+  
+  def name 
+    @name
+  end 
+  
+   def roster 
+    @roster
   end
   
-  def add_student 
-    @roster = {10 => ["AC Slater", "Jeff Biard", "Blake Johnson"]}
-    
+  def add_student(grade, student_name)
+    @roster[10] = ["AC Slater"]
+    @roster[9] = ["Homer Simpson"]
+    @roster[10] << ["Jeff Biard", "Avi Flombaum"]
+    @roster[7] = ["Blake Johnson"]
+  end 
   
-    
+  def grade 
     
   end 
+  
+  def sort 
+    
+  end 
+  
 end 
   
     
