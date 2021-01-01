@@ -1,3 +1,4 @@
+
 # Domain Model for a School
 
 ## Objectives
