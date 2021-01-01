@@ -22,8 +22,8 @@ class School
   end
   
   def sort
-    @roster.filter do |grade, students|
-      students.sort!
+    @roster.filter do |grade, students_array|
+      students_array.sort!
     end
   end
 end
