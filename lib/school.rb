@@ -8,21 +8,16 @@ class School
   end
 
   def add_student(name, grade)
-    ros = @roster
-    if !ros.has_key?(grade)
-      ros[grade] = [ ]
-    end
-
-    ros[grade] << name
-    ros[grade]
+    roster[grade] ||= [ ]
+    roster[grade] << name
   end
 
   def grade(num)
-    @roster[num]
+    roster[num]
   end
 
   def sort
-    @roster.each { |grade, students| @roster[grade] = students.sort }
-    @roster
+    roster.each { |grade, students| roster[grade] = students.sort }
+    roster
   end
 end
