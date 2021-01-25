@@ -1,0 +1,45 @@
+#create a class that can be initialized with a name 
+class School
+attr_accessor:name
+
+  def initialize(name)
+    @name = name
+  end
+
+  def school 
+  school = School.new("Bayside High School")
+  end 
+
+
+#the school should have a roster that is an empty has upon initialization
+  def roster 
+   school.roster
+  end 
+  
+
+  
+  #add a hash
+  # hash = {}
+  # hash["new_key"] = []
+  # hash["new_key"] << "new_value_for_value_array"
+  
+  
+#you should be able to add a student by calling the add_student method and giving it an argument of the name and grade
+  def add_student (name, grade)
+    school.add_student
+  school.add_student("Zach Morris", 9)
+  school.add_student("AC Slater", 9)
+  school.add_student("Kelly Kapowski", 10)
+  school.add_student("Screech", 11)
+  end 
+#a method, grade, should take in all arguments of a grade and return all of the students in that grade
+  def grade
+    school.grade()
+  end 
+  
+#sort the list of students where the strings in the student arrays are sorted alphabetically (names sorted)
+  def sort 
+    school.sort
+  end 
+
+end 
