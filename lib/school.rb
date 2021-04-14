@@ -1,5 +1,3 @@
-require "pry"
-
 class School 
   attr_reader :name, :roster
   
@@ -22,14 +20,11 @@ class School
   end 
   
   def sort 
-    @roster.collect do |grade,students|
-      students.sort { |a,b| a<=>b} 
-    end 
+    sorted_roster = {}
+    @roster.each do |grade,students|
+      sorted_roster[grade] = (students.sort {|a,b| a<=>b})
+    end
+    sorted_roster
   end 
-    #binding.pry 
-  #end   
    
 end 
-
-#school=School.new("New")
-#binding.pry
