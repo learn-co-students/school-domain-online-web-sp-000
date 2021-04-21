@@ -1,10 +1,10 @@
 
 class School
 
-School = []
+school = School.new("Bayside High School")
 
-def initialize(roster)
-  @roster = roster
+def initialize(name)
+  @name = name
 end 
 
 end
