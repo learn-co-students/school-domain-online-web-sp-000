@@ -9,8 +9,7 @@ attr_accessor :name, :roster
   end 
   
   def add_student(name, grade)
-    roster["name", "grade"] = []
-    roster["name", "grade"] << roster
+    roster[grade] = [name]
   end
 
 end
