@@ -1,10 +1,12 @@
 
 class School
-attr_reader :name 
 
-def initialize(name)
-  @name = name
-end 
+roster = []
+
+  def initialize(roster)
+    @roster = roster
+  end 
+  
 
 
 end
