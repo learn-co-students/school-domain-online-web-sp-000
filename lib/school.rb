@@ -23,15 +23,10 @@ attr_accessor :name, :roster
   end
 
   def sort 
-    roster.sort do |a, b|
-  if a == b
-    0
-  elsif a < b
-    -1
-  elsif a > b
-    1
-  end
-end
+    roster_sorted = []
+    roster.each do |grade, name|
+    roster_sorted[grade] = name.sort
+    end
   end 
 
 end
