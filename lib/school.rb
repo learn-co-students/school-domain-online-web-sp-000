@@ -23,10 +23,11 @@ attr_accessor :name, :roster
   end
 
   def sort 
-    roster_sorted = []
+    roster_sorted = {}
     roster.each do |grade, name|
     roster_sorted[grade] = name.sort
     end
+    roster_sorted
   end 
 
 end
