@@ -1,13 +1,4 @@
-class School
-  
-  attr_reader :name, :roster
-  
-  def initialize(name)
-    @name = name
-    @roster = {}
-  end
-  
-  def add_student(name, grade)
+def add_student(name, grade)
     if @roster[grade]
       @roster[grade] << name
     else
@@ -22,9 +13,7 @@ class School
   
   def sort 
     @roster.each do |grade, names|
-      names.sort!
+      names.sort
     end
     @roster
   end
-  
-end
